@@ -11,10 +11,39 @@ html {
     color: var(--dark);
 }
 
-body {
+/*body {
     background: #ccc;
     margin: 30px 50px;
     line-height: 1.4;
+}*/
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--font-color-primary);
+  background-color: var(--primary);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+nav a,
+button,
+footer {
+  font-family: var(--font-headers);
+}
+
+nav a,
+h2 {
+  text-transform: capitalize;
+}
+
+h2::first-letter {
+  color: red;
+  font-size: 4rem;
 }
 
 .btn {
@@ -140,7 +169,64 @@ h5 {
     color: white;
     font-size: 1.3rem
 }
-.boxes {
+
+
+.productlist img {
+  filter: grayscale(100%);
+  transition: all 0.4s;
+}
+
+.product:hover img {
+  filter: grayscale(30%);
+}
+
+.productlist > section {
+  display: grid;
+  max-width: 1200px;
+  margin: auto;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 60px;
+  margin-bottom: 60px;
+}
+
+.productlist > section > h2 {
+  grid-column: 1/-1;
+  margin-bottom: -40px;
+}
+
+.product {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 3px 3px 5px #000000ab;
+}
+
+.product p {
+  color: var(--font-color-secondary);
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.productbody {
+  position: relative;
+  display: flex;
+  flex: auto;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1em;
+}
+
+.productbody button {
+  margin-top: auto;
+  background-color: var(--secondary-light);
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+/*.boxes {
     display: grid;
     grid-gap: 20px;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -166,7 +252,7 @@ h5 {
 .portfolio img {
     width: 100%;
     box-shadow: (--shadow);
-}
+}*/
 footer {
     margin-top: 2rem;
     background: var(--dark);
