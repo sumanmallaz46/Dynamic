@@ -22,9 +22,9 @@ function showProduct(myProduct) {
     //clone the template
     const myCopy = temp.cloneNode(true);
 
-    /*if(!myProduct.discount) {
+    if(!myProduct.discount) {
         myCopy.querySelector(".data_discount").classList.add("hidden")
-    }*/
+    }
     if (myProduct.vegetarian) {
         //console.log("veg");
         myCopy.querySelector(".vegetarian").classList.remove("hidden");
