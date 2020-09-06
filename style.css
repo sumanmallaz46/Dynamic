@@ -83,6 +83,17 @@ img {
 }
 
 /*navigation*/
+.icons{
+    width: 5vw;
+    display: flex;
+}
+
+/*Filter*/
+.fillers{
+    margin: 2vw;
+   width: 20vw;
+
+}
 
 
 .main-nav ul {
@@ -171,13 +182,23 @@ h5 {
 }
 
 
-.productlist img {
-  filter: grayscale(100%);
-  transition: all 0.4s;
-}
 
-.product:hover img {
-  filter: grayscale(30%);
+.productlist img {
+  background: red;
+  transition-property: width, height;
+  transition-duration: 2s;
+}
+}
+.productlist:hover{
+  transform: scale(1.03);
+    transition: .5s;
+}
+.hidden{
+    display: none;
+}
+.product:hover  {
+  transform: scale(1.08);
+    transition: .5s;
 }
 
 .productlist > section {
@@ -226,39 +247,63 @@ h5 {
   font-size: 1.3rem;
   cursor: pointer;
 }
-/*.boxes {
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-}
-.box {
-    background: var(--primary);
-    text-align: center;
-    padding: 1.5re 2 rem;
-}
-.info {
-    background: var(--primary);
-    box-shadow: var(--shadow);
-    display: grid;
-    grid-gap: 30px;
-    grid-template-columns: 1fr 1fr;
-    padding: 3rem;
-}
-.portfolio {
-    display: grid;
-    grid-gap: 20px;
-     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-}
-.portfolio img {
-    width: 100%;
-    box-shadow: (--shadow);
-}*/
+*/
+
 footer {
     margin-top: 2rem;
     background: var(--dark);
     color: var(--light);
     text-align: center;
     padding: 1rem;
+}
+.soldout {
+    position: absolute;
+    top:0;
+    left:0;
+    background: red;
+}
+
+
+button.active {
+  background: green;
+  color: white;
+}
+#see_details{
+    background-color: skyblue;
+}
+.data_discount{
+    position: absolute;
+    background-color: lightgreen;
+    color: white;
+    height: 2.5vw;
+    font-size: 2vw;
+    width: 10vw
+
+        ;
+    top: -2.5vw;
+    left: .1vw;
+    border-radius: 10%;
+
+}
+.hide {
+  display: none;
+}
+
+.modal-background {
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  border: 1px solid #7c1f17;
+  margin: 1em;
+  padding: 2em;
 }
 
 @media(max-width: 700px) {

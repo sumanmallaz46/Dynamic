@@ -3,28 +3,28 @@
 
 <head>
     <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
     <link rel="stylesheet" href="style.css">
     <title>Static Website</title>
 
     <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css" />
-  <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@253;1300&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@253;1300&display=swap" rel="stylesheet" />
 
 </head>
 
 <body>
     <div class="wrapper">
         <header id="header">
-               <bar>
-      <a href="#">Petrograd@gmail.com</a>
+            <bar>
+                <a href="#">Petrograd@gmail.com</a>
 
 
-    </bar>
-                </header>
+            </bar>
+        </header>
         <nav class="main-nav">
 
             <ul>
@@ -32,7 +32,7 @@
                 <li><a href="#">Starter</a></li>
                 <li><a href="#">Main</a></li>
                 <li><a href="#">Drinks</a></li>
-                 <li><a href="#">SIDEORDER</a></li>
+                <li><a href="#">SIDEORDER</a></li>
 
             </ul>
         </nav>
@@ -56,36 +56,54 @@
             </div>
         </section>
     </div>
-        <!--page content-->
+    <!--page content-->
 
-        <main class="productlist">
-    <section id="starter">
-      <h2>Starter</h2>
-      <template id="productTemplate">
-        <article class="product">
-          <img src="https://kea-alt-del.dk/t5/site/imgs/small/rodbede-cabanossi-sm.jpg" alt="" />
-          <section class="productbody">
-            <h3 class="data_name">Some really delisious dish</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptatum, velit inventore. Architecto nihil quis temporibus aut.
-            </p>
-            <h4 class="data_price">49,-</h4>
-            <button>See details</button>
-          </section>
-        </article>
-      </template>
-    </section>
-    <section id="main">
-      <h2>Main</h2>
+    <details class="fillers">
+        <summary>Filters</summary>
+        <button id="veggiefilter">Veggie dishes</button>
+        <button id="alcoholfilter">Non-alcoholic dishes</button>
+    </details>
 
-    </section>
-  </main>
-   <footer>
-       <p>petrogard &copy;2018</p>
-   </footer>
+    <main class="productlist">
+        <section id="starter">
+            <h2>Starter</h2>
+            <template id="productTemplate">
+                <article class="product">
+                    <img src="https://kea-alt-del.dk/t5/site/imgs/small/rodbede-cabanossi-sm.jpg" alt="" />
+                    <div class="icons">
+                        <img class="vegetarian hidden" src="img/leaf-310555.svg">
+                    </div>
+                    <section class="productbody">
+                        <h3 class="data_name">Some really delisious dish</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Voluptatum, velit inventore. Architecto nihil quis temporibus aut.
+                        </p>
+                        <h4 class="data_price">49,-</h4>
+                         <h4 class="data_discount">%off</h4>
 
-<script src="script.js"></script>
+          <button id="see_details">See details</button>
+                    </section>
+                </article>
+            </template>
+        </section>
+        <section id="main">
+            <h2>Main</h2>
 
-    </body>
-</html>
+        </section>
+    </main>
+    <footer>
+        <p>petrogard &copy;2018</p>
+    </footer>
+    <div class="modal-background hide">
+    <div class="modal-content">
+      <h3 class="modal-name">NAME</h3>
+      <img src="" alt="" class="modal-image" />
+      <p class="modal-description">LONG DESCRIPTION</p>
+
+    </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body></html>
